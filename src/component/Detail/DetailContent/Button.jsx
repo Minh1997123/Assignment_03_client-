@@ -32,14 +32,17 @@ const Button = function (props) {
         data: itemDetail,
         quantity: Number(quantity),
       };
-      const res = await fetch("http://localhost:5000/add-cart", {
-        method: "PATCH",
-        headers: {
-          "Content-type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(item),
-      });
+      const res = await fetch(
+        "https://server-assignment-03.vercel.app/add-cart",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(item),
+        }
+      );
       if (res.status === 401) {
         return alert("ban can dang nhap truoc khi them san pham vao gio hang");
       }

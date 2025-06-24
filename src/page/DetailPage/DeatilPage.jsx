@@ -13,9 +13,12 @@ const DetailPage = function () {
 export default DetailPage;
 
 export const loader = async function ({ params }) {
-  const res = await fetch(`http://localhost:5000/product/${params.productId}`, {
-    credentials: "include",
-  });
+  const res = await fetch(
+    `https://server-assignment-03.vercel.app/product/${params.productId}`,
+    {
+      credentials: "include",
+    }
+  );
   const reqData = await res.json();
   return reqData;
 };

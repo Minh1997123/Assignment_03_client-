@@ -72,7 +72,7 @@ function App() {
   useEffect(function () {
     const getLogin = async function () {
       // lay thong tin nguoi dung da dang nhap khi lan dau vao web
-      const res = await fetch("http://localhost:5000/login", {
+      const res = await fetch("https://server-assignment-03.vercel.app/login", {
         method: "POST",
         credentials: "include",
       });

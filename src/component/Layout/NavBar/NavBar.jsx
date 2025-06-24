@@ -19,7 +19,7 @@ const NavBar = function () {
   };
   // ham logout
   const logoutHandler = async function () {
-    const res = await fetch("http://localhost:5000/logout", {
+    const res = await fetch("https://server-assignment-03.vercel.app/logout", {
       method: "POST",
       credentials: "include",
     });

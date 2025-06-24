@@ -22,7 +22,7 @@ export default RegisterPage;
 export const action = async function ({ request }) {
   const fd = await request.formData();
   const dataUser = Object.fromEntries(fd.entries());
-  const res = await fetch(`http://localhost:5000/sign-up`, {
+  const res = await fetch(`https://server-assignment-03.vercel.app/sign-up`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

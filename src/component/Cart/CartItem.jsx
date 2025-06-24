@@ -30,14 +30,17 @@ const CartItem = function (props) {
   useEffect(
     function () {
       const patchUpdateCart = async function () {
-        const res = await fetch("http://localhost:5000/update-cart", {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify(item),
-        });
+        const res = await fetch(
+          "https://server-assignment-03.vercel.app/update-cart",
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: "include",
+            body: JSON.stringify(item),
+          }
+        );
         if (res.status === 200) {
           if (quantity < 1) {
             // xoa san pham khi chinh so luong ve 0

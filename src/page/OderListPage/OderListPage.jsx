@@ -52,7 +52,7 @@ const OderListPage = function () {
 export default OderListPage;
 
 export const loader = async function () {
-  const res = await fetch("http://localhost:5000/oders", {
+  const res = await fetch("https://server-assignment-03.vercel.app/oders", {
     credentials: "include",
   });
   const resData = await res.json();

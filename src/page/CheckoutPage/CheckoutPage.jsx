@@ -36,7 +36,7 @@ export const action = async function ({ request }) {
     products: newListCart,
     total: total,
   };
-  const res = await fetch("http://localhost:5000/add-oder", {
+  const res = await fetch("https://server-assignment-03.vercel.app/add-oder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
