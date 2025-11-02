@@ -52,7 +52,7 @@ export default OderDetailPage;
 export const loader = async function ({ params }) {
   const oderId = params.oderId;
   const res = await fetch(
-    `https://server-assignment-03.vercel.app/oder-detail/${oderId}`,
+    `${process.env.REACT_APP_API_URL}/oder-detail/${oderId}`,
     {
       credentials: "include",
     }

@@ -14,7 +14,7 @@ export default DetailPage;
 
 export const loader = async function ({ params }) {
   const res = await fetch(
-    `https://server-assignment-03.vercel.app/product/${params.productId}`,
+    `${process.env.REACT_APP_API_URL}/product/${params.productId}`,
     {
       credentials: "include",
     }

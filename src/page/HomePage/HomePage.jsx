@@ -16,12 +16,9 @@ const HomePage = function () {
 export default HomePage;
 // ham loader lay 8 san pham dau tien tu api
 export const loader = async function () {
-  const resQuery = await fetch(
-    "https://server-assignment-03.vercel.app/products",
-    {
-      credentials: "include",
-    }
-  );
+  const resQuery = await fetch(`${process.env.REACT_APP_API_URL}/products`, {
+    credentials: "include",
+  });
   const data = await resQuery.json();
   const listItem = data.filter(function (item, index) {
     return index < 8;

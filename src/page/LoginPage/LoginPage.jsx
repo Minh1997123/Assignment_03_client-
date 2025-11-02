@@ -24,7 +24,7 @@ export const action = async function ({ request }) {
   // lay thong tin tu local va tu form
   const fd = await request.formData();
   const dataUser = Object.fromEntries(fd.entries());
-  const res = await fetch("https://server-assignment-03.vercel.app/login", {
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
